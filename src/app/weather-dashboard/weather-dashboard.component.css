@@ -1,0 +1,815 @@
+::ng-deep .dropdown-menu { width: 400px; }
+.h250{
+    height:350px;
+}
+.h400{
+  height: 450px;
+}
+.w-250{
+    width:252px;
+}
+.w-300{
+    width:300px;
+}
+.cursor-pointer{
+  cursor:pointer
+}
+.backgroundss{
+  background: lightgrey;
+}
+.w-90{
+  width:90%;
+}
+
+/* thermo-head */
+.temp{
+    width:45px;
+    height: 300px;
+    left:50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    z-index: 10;
+    background-color: lightgray;
+}
+
+/* avg temp part  */
+.temp1{
+    width:30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: translateX(-50%);
+    left:50%;
+    bottom:0;
+    z-index: 5;
+}
+.temp1-hov{
+    display: none;
+    width:60px;
+    padding:5px;
+    top:0;
+    left:0;
+    margin-left: 50px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+.temp1:hover .temp1-hov{
+    display: block;
+}
+.temp1-hov::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:0;
+    width:10px;
+    height:10px;
+    background-color: black;
+    transform: translate(-50%,-50%)rotate(45deg);
+    z-index:-1;
+}
+
+/* min temp part  */
+.temp-min{
+    width:30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: translateX(-50%);
+    left:50%;
+    bottom:0;
+    z-index: 6;
+}
+.temp-min-hov{
+    display: none;
+    width:90px;
+    padding:5px;
+    top:0;
+    left:0;
+    margin-left: 50px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+.temp-min:hover .temp-min-hov{
+    display: block;
+}
+.temp-min-hov::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:0;
+    width:10px;
+    height:10px;
+    background-color: black;
+    transform: translate(-50%,-50%)rotate(45deg);
+    z-index:-1;
+}
+
+/* max temp part  */
+.temp-max{
+    width:30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform: translateX(-50%);
+    left:50%;
+    bottom:0;
+    z-index: 4;
+}
+.temp-max-hov{
+    display: none;
+    width:90px;
+    padding:5px;
+    top:0;
+    left:0;
+    margin-left: 50px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+.temp-max:hover .temp-max-hov{
+    display: block;
+}
+.temp-max-hov::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:0;
+    width:10px;
+    height:10px;
+    background-color: black;
+    transform: translate(-50%,-50%)rotate(45deg);
+    z-index:-1;
+}
+/* thermo-bottom */
+.circle{
+    width:85px;
+    height:85px;
+    top:260px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+    /* border:1px solid lightgray; */
+    box-sizing: content-box;
+    background-color: lightgray;
+
+}
+.circle1{
+    width:84px;
+    height:84px;
+    top:261px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:20;
+    background-color: white;
+    background-color: lightgray;
+    /* overflow: hidden; */
+}
+.inner-circle1{
+    width:70px;
+    height:70px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.inner-circle2{
+    width:30px;
+    height:50px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+
+#logo {
+    display: inline-block;
+    position: relative;
+    height: 110px;
+    overflow: hidden;
+  }
+  
+  #logo .speedometer {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    border: 20px solid #08f7fe;
+    border-right: 20px solid white;
+    border-bottom: 20px solid white;
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+  #logo .needle {
+    width: 10px;
+    height: 90px;
+    background: #999999;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    display: inline-block;
+    left:48%;
+    position: absolute;
+    top: 10px;
+    animation: move 5s infinite;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+  @keyframes move {
+    0% {
+      transform: rotate(-90deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .texty{
+    animation: neon2 1.5s ease-in-out infinite alternate;
+    font-size: 2em;
+    color:#08f7fe;
+    font-weight: bolder;
+    font-family: 'Audiowide', cursive;
+  /* color: #228DFF; */
+    }
+  @keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+  }
+
+
+
+
+
+
+ /* compass direction  */
+  .compass_wrapper {
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    /* top: 50px; */
+    margin: 0 auto 0 auto;
+    width: 240px;
+    height: 240px;
+    }
+    
+    .compass_bottom_disco {
+    background-color: #333333;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    }
+    
+    .compass_middle_disco {
+    background-color: #555555;
+    position: relative;
+    top: 20px;
+    margin: 0 auto 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    }
+    
+    .compass_top_disco {
+    background-color: #FFFFFF;
+    position: relative;
+    top: 30px;
+    margin: 0 auto 0 auto;
+    width: 130px;
+    height: 130px;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    }
+    
+    .compass_marks {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    }
+    
+    .compass_marks li {
+    background-color: #444444;
+    position: absolute;
+    left: 99px;
+    width: 2px;
+    height: 20px;
+    -webkit-transform-origin: 0 500%;
+    -moz-transform-origin: 0 500%;
+    transform-origin: 0 500%;
+    }
+    
+    .compass_marks li:first-child {
+    -webkit-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    transform:rotate(0deg);
+    }
+    
+    .compass_marks li:nth-child(2) {
+    -webkit-transform:rotate(9deg);
+    -moz-transform:rotate(9deg);
+    transform:rotate(9deg);
+    }
+    
+    .compass_marks li:nth-child(3) {
+    -webkit-transform:rotate(18deg);
+    -moz-transform:rotate(18deg);
+    transform:rotate(18deg);
+    }
+    
+    .compass_marks li:nth-child(4) {
+    -webkit-transform:rotate(27deg);
+    -moz-transform:rotate(27deg);
+    transform:rotate(27deg);
+    }
+    
+    .compass_marks li:nth-child(5) {
+    -webkit-transform:rotate(36deg);
+    -moz-transform:rotate(36deg);
+    transform:rotate(36deg);
+    }
+    
+    
+    .compass_marks li:nth-child(6) {
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg);
+    }
+    
+    .compass_marks li:nth-child(7) {
+    -webkit-transform:rotate(54deg);
+    -moz-transform:rotate(54deg);
+    transform:rotate(54deg);
+    }
+    
+    .compass_marks li:nth-child(8) {
+    -webkit-transform:rotate(63deg);
+    -moz-transform:rotate(63deg);
+    transform:rotate(63deg);
+    }
+    
+    .compass_marks li:nth-child(9) {
+    -webkit-transform:rotate(72deg);
+    -moz-transform:rotate(72deg);
+    transform:rotate(72deg);
+    }
+    
+    .compass_marks li:nth-child(10) {
+    -webkit-transform:rotate(81deg);
+    -moz-transform:rotate(81deg);
+    transform:rotate(81deg);
+    }
+    
+    .compass_marks li:nth-child(11) {
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    transform:rotate(90deg);
+    }
+    
+    .compass_marks li:nth-child(12) {
+    -webkit-transform:rotate(99deg);
+    -moz-transform:rotate(99deg);
+    transform:rotate(99deg);
+    }
+    
+    .compass_marks li:nth-child(13) {
+    -webkit-transform:rotate(108deg);
+    -moz-transform:rotate(108deg);
+    transform:rotate(108deg);
+    }
+    
+    .compass_marks li:nth-child(14) {
+    -webkit-transform:rotate(117deg);
+    -moz-transform:rotate(117deg);
+    transform:rotate(117deg);
+    }
+    
+    .compass_marks li:nth-child(15) {
+    -webkit-transform:rotate(126deg);
+    -moz-transform:rotate(126deg);
+    transform:rotate(126deg);
+    }
+    
+    
+    .compass_marks li:nth-child(16) {
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+    transform:rotate(135deg);
+    }
+    
+    .compass_marks li:nth-child(17) {
+    -webkit-transform:rotate(144deg);
+    -moz-transform:rotate(144deg);
+    transform:rotate(144deg);
+    }
+    
+    .compass_marks li:nth-child(18) {
+    -webkit-transform:rotate(153deg);
+    -moz-transform:rotate(153deg);
+    transform:rotate(153deg);
+    }
+    
+    .compass_marks li:nth-child(19) {
+    -webkit-transform:rotate(162deg);
+    -moz-transform:rotate(162deg);
+    transform:rotate(162deg);
+    }
+    
+    .compass_marks li:nth-child(20) {
+    -webkit-transform:rotate(171deg);
+    -moz-transform:rotate(171deg);
+    transform:rotate(171deg);
+    }
+    
+    .compass_marks li:nth-child(21) {
+    -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    transform:rotate(180deg);
+    }
+    
+    .compass_marks li:nth-child(22) {
+    -webkit-transform:rotate(189deg);
+    -moz-transform:rotate(189deg);
+    transform:rotate(189deg);
+    }
+    
+    .compass_marks li:nth-child(23) {
+    -webkit-transform:rotate(198deg);
+    -moz-transform:rotate(198deg);
+    transform:rotate(198deg);
+    }
+    
+    .compass_marks li:nth-child(24) {
+    -webkit-transform:rotate(207deg);
+    -moz-transform:rotate(207deg);
+    transform:rotate(207deg);
+    }
+    
+    .compass_marks li:nth-child(25) {
+    transform:rotate(216deg);
+    /* -moz-transform:rotate(2`6deg); */
+    transform:rotate(216deg);
+    }
+    
+    
+    .compass_marks li:nth-child(26) {
+    -webkit-transform:rotate(225deg);
+    -moz-transform:rotate(225deg);
+    transform:rotate(225deg);
+    }
+    
+    .compass_marks li:nth-child(27) {
+    -webkit-transform:rotate(234deg);
+    -moz-transform:rotate(234deg);
+    transform:rotate(234deg);
+    }
+    
+    .compass_marks li:nth-child(28) {
+    -webkit-transform:rotate(243deg);
+    -moz-transform:rotate(243deg);
+    transform:rotate(243deg);
+    }
+    
+    .compass_marks li:nth-child(29) {
+    -webkit-transform:rotate(252deg);
+    -moz-transform:rotate(252deg);
+    transform:rotate(252deg);
+    }
+    
+    .compass_marks li:nth-child(30) {
+    -webkit-transform:rotate(261deg);
+    -moz-transform:rotate(261deg);
+    transform:rotate(261deg);
+    }
+    
+    .compass_marks li:nth-child(31) {
+    -webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    transform:rotate(270deg);
+    }
+    
+    .compass_marks li:nth-child(32) {
+    -webkit-transform:rotate(279deg);
+    -moz-transform:rotate(279deg);
+    transform:rotate(279deg);
+    }
+    
+    .compass_marks li:nth-child(33) {
+    -webkit-transform:rotate(288deg);
+    -moz-transform:rotate(288deg);
+    transform:rotate(288deg);
+    }
+    
+    .compass_marks li:nth-child(34) {
+    -webkit-transform:rotate(297deg);
+    -moz-transform:rotate(297deg);
+    transform:rotate(297deg);
+    }
+    
+    .compass_marks li:nth-child(35) {
+    -webkit-transform:rotate(306deg);
+    -moz-transform:rotate(306deg);
+    transform:rotate(306deg);
+    }
+    
+    .compass_marks li:nth-child(36) {
+    -webkit-transform:rotate(315deg);
+    -moz-transform:rotate(315deg);
+    transform:rotate(315deg);
+    }
+    
+    .compass_marks li:nth-child(37) {
+    -webkit-transform:rotate(324deg);
+    -moz-transform:rotate(324deg);
+    transform:rotate(324deg);
+    }
+    
+    .compass_marks li:nth-child(38) {
+    -webkit-transform:rotate(333deg);
+    -moz-transform:rotate(333deg);
+    transform:rotate(333deg);
+    }
+    
+    .compass_marks li:nth-child(39) {
+    -webkit-transform:rotate(342deg);
+    -moz-transform:rotate(342deg);
+    transform:rotate(342deg);
+    }
+    
+    .compass_marks li:nth-child(40) {
+    -webkit-transform:rotate(351deg);
+    -moz-transform:rotate(351deg);
+    transform:rotate(351deg);
+    }
+    
+    .primary_contourn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    }
+    
+    .compassN {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid #CC9900;
+    border-top: 80px solid transparent;
+    border-bottom: 20px solid transparent;
+    }
+    
+    .compassN:after {
+    content: " ";
+    position: absolute;
+    top: -80px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #930;
+    border-top: 80px solid transparent;
+    border-bottom: 20px solid transparent;
+    }
+    
+    .compassE {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 20px solid #CC9900;
+    }
+    
+    .compassE:after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 20px solid #930;
+    }
+    
+    .compassS {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid #930;
+    border-bottom: 80px solid transparent;
+    border-top: 20px solid transparent;
+    }
+    
+    .compassS:after {
+    content: " ";
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #CC9900;
+    border-bottom: 80px solid transparent;
+    border-top: 20px solid transparent;
+    }
+    
+    .compassW {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #CC9900;
+    }
+    
+    .compassW:after {
+    content: " ";
+    position: absolute;
+    top: -40px;
+    left: -80px;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #930;
+    }
+    
+    .secondary_contourn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    
+    -webkit-animation-name: secondary_contourn;
+        -webkit-animation-duration: 60s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: secondary_contourn;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+    animation-fill-mode: forwards;
+    }
+    
+    @-webkit-keyframes secondary_contourn {
+    0% {-webkit-transform: rotate(0deg);}
+    25% {-webkit-transform: rotate(90deg);}
+    50% {-webkit-transform: rotate(180deg);}
+    75% {-webkit-transform: rotate(270deg);}
+    100% {-webkit-transform: rotate(360deg);}
+    }
+    
+    @keyframes secondary_contourn {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+    }
+    
+    .compassNE {
+    position: absolute;
+    top: 25px;
+    left: 85px;
+    width: 0;
+    height: 0;
+    border-right: 15px solid #CC9900;
+    border-top: 60px solid transparent;
+    border-bottom: 15px solid transparent;
+    }
+    
+    .compassNE:after {
+    content: " ";
+    position: absolute;
+    top: -60px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #930;
+    border-top: 60px solid transparent;
+    border-bottom: 15px solid transparent;
+    }
+    
+    .compassSE {
+    position: absolute;
+    top: 85px;
+    left: 100px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 15px solid #CC9900;
+    }
+    
+    .compassSE:after {
+    content: " ";
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 15px solid #930;
+    }
+    
+    .compassSW {
+    position: absolute;
+    top: 100px;
+    left: 85px;
+    width: 0;
+    height: 0;
+    border-right: 15px solid #930;
+    border-bottom: 60px solid transparent;
+    border-top: 15px solid transparent;
+    }
+    
+    .compassSW:after {
+    content: " ";
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #CC9900;
+    border-bottom: 60px solid transparent;
+    border-top: 15px solid transparent;
+    }
+    
+    .compassNW {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #CC9900;
+    }
+    
+    .compassNW:after {
+    content: " ";
+    position: absolute;
+    top: -30px;
+    left: -60px;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #930;
+    }
+
+    /* compass virtua direction */
+    .virtual{
+      width:240px;
+      height:240px;
+      border-radius: 50%; 
+    }
+    .inner-virtual{
+      /* height:30px; */
+      background-color: #b48803;
+      color:#333333;
+      padding:10px;
+      position: absolute;
+      top:0;
+      left:50%;
+      transform: translate(-50%,-120%);
+      z-index: 1;
+      border-radius: 10px;
+    }
+    .inner-virtual::before{
+      content: "";
+    position: absolute;
+    left:50%;
+    bottom:0;
+    width:10px;
+    height:10px;
+    background-color: #b48803;
+    transform: translate(-50%,50%)rotate(45deg);
+    z-index:0;
+    }
